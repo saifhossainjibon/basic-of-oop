@@ -17,6 +17,7 @@ class Student:
     def enroll_student(self):
         if not self.__is_enrolled:
             self.__is_enrolled=True
+            print('This student have successfully enrolled')
         else:
             print('This student already enrolled')
             # raise Exception('This student already enrolled')
@@ -24,6 +25,7 @@ class Student:
     def drop_student(self):
         if self.__is_enrolled:
             self.__is_enrolled = False
+            print('This student have drop')
         else:
             print('This student have not enrolled')
             # raise Exception('This student have not enrolled')
@@ -45,7 +47,7 @@ StudentDatabase.add_student(stu5)
 
 # print(stu1.get_stu_id)
 while True:
-    print("\nMenu:")
+    print("Menu:")
     print("1. View All Students")
     print("2. Enroll Student")
     print("3. Drop Student")
